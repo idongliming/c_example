@@ -1,0 +1,9 @@
+ 你可以直接右击新建文件夹，也可以右击打开Git bash命令行窗口通过命令来创建。
+git init
+git add .
+git commit
+ssh-keygen -t rsa -C "youremail@example.com"创建密钥
+设置，创建，ssh
+git remote add origin https://github.com/guyibang/TEST2.git仓库关联
+git push -u origin master首次上传
+git push origin master以后上传（记得每次上传前需要执行git commit）
