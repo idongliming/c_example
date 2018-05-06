@@ -17,12 +17,14 @@ void fun(char *str,int n)
 {                
   
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  char t;
+  int i;
+  for(i=0;i<n/2;i++)
+  {
+	  t=str[i];
+	  str[i]=str[n-1-i];
+	  str[n-1-i]=t;
+  }
   /**********  End  **********/
   
 }

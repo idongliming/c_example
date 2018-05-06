@@ -20,12 +20,20 @@ float fun(float array[],int n)
 {
   
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  int i;
+  float ave=0;
+  for(i=0;i<n;i++)
+  {
+	  if(array[i]>Max)
+	  {
+		  Max=array[i];
+		  J=1;
+	  }
+		else if(array[i]==Max)
+			J++;
+	   ave+=array[i]/n;
+  }
+  return ave;
   /**********  End  **********/
   
 }
