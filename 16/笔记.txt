@@ -18,3 +18,6 @@ git push origin master以后上传（记得每次上传前需要执行git commit -m"注释"）
      4、在Github上设置好SSH密钥后，新建一个远程仓库，通过git remote add origin https://github.com/guyibang/TEST2.git将本地仓库和远程仓库进行关联；
 
      5、最后通过git push -u origin master把本地仓库的项目推送到远程仓库（也就是Github）上；（若新建远程仓库的时候自动创建了README文件会报错，解决办法看上面）
+https://blog.csdn.net/zamamiro/article/details/70172900
+https://blog.csdn.net/qq_23948283/article/details/51753024
+无法解决参考链接
