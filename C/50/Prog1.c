@@ -2,55 +2,59 @@
 【程序设计】
 --------------------------------------------------
 
-功能：求出菲波那契数列的前一项与后一项之比的极限的
-      近似值。
-例如：当误差为0.0001时，函数值为0.618056。
+功能：对长度为7个字符的字符串，除首、尾字符外，将其
+      余5个字符按降序排列。
+例如：原来的字符串为CEAedca,排序后输出为CedcEAa。
 
--------------------------------------------------*/
+------------------------------------------------*/
 
-#include <stdio.h>
-#include "math.h"
-void wwjt();
-     
-float fun()
+#include<stdio.h>
+#include<ctype.h>
+#include<conio.h>
+void  wwjt(); 
+  
+void fun(char *s,int num)
 {
-  
   /**********Program**********/
-  int i;
-  double a=1,b=1,c;
-  for(i=0;i<1000;i++)
+  int i,temp;
+  for(i=1;i<num-2;i++)
   {
-	  c=a+b;
-	  a=b;
-	  b=c;
+	if(s[i]<s[i+1])
+	{
+		temp=s[i];
+		s[i]=s[i+1];
+		s[i+1]=temp;
+	}
   }
-  return a/c;
   /**********  End  **********/
-  
 }
 
 main()
 {
-  printf("y=%f\n",fun());
+  char s[10];
+  printf("输入7个字符的字符串:");
+  gets(s);
+  fun(s,7);
+  printf("\n%s",s);
   wwjt();
 }
 
-void wwjt()
-{
-  FILE *IN,*OUT;
-  float fOUT;
-  IN=fopen("19.IN","r");
-  if(IN==NULL)
+void wwjt()     
+{     
+  
+  int i;
+  char a[100];
+  FILE *rf, *wf ;     
+  rf = fopen("in.dat", "r") ;
+  wf = fopen("out.dat", "w") ;
+  for(i=0;i<3;i++)
   {
-    printf("Please Verify The Currernt Dir..it May Be Changed");
+    fscanf(rf, "%s", &a);
+    fun(a,7);
+    fprintf(wf, "%s", a);
+    fprintf(wf, "\n");
   }
-  OUT=fopen("19.out","w");
-  if(OUT==NULL)
-  {
-    printf("Please Verify The Current Dir.. it May Be Changed");
-  }
-  fOUT=fun();
-  fprintf(OUT,"%f\n",fOUT);
-  fclose(IN);
-  fclose(OUT);
+  
+  fclose(rf);
+  fclose(wf);
 }

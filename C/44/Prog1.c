@@ -2,65 +2,51 @@
 【程序设计】
 --------------------------------------------------
 
-功能：求出二维数组周边元素之和，作为函数值返回。二
-      维数组的值在主函数中赋予。
+功能：将两个两位数的正整数a、b合并形成一个整数放在c
+      中。合并的方式是： 将a数的十位和个位数依次放
+      在c数的个位和百位上, b数的十位和个位数依次放
+      在c数的十位和千位上。     
+例如： 当a=45，b=12， 调用该函数后， c=2514。
+     
+------------------------------------------------*/
 
--------------------------------------------------*/
-
-#define M 4
-#define N 5
 #include <stdio.h>
-void wwjt();
+void  wwjt(); 
  
-int fun(int a[M][N])
+void fun(int a, int b, long *c)     
 {
-
-/**********Program**********/
-	int i,sum=0;
-	for(i=0;i<N;i++)
-	{
-		sum+=a[0][i];
-		sum+=a[M-1][i];
-	}
-	for(i=1;i<M-1;i++)
-	{
-		sum+=a[i][0];
-		sum+=a[i][N-1];
-	}
-	return sum;
-/**********  End  **********/
-
+  /**********Program**********/
+  
+  
+  
+  
+  
+  
+  /**********  End  **********/
 }
 
-main()
-{
-int a[M][N]={{1,3,5,7,9},{2,4,6,8,10},{2,3,4,5,6},{4,5,6,7,8}};
-int y;
-y=fun(a);
-printf("s=%d\n",y);
-wwjt();
-}
-void wwjt()
-{
-FILE *IN,*OUT;
-int iIN[M][N],iOUT;
-int i,j,k;
-IN=fopen("14.IN","r");
-if(IN==NULL)
-{printf("Please Verify The Currernt Dir..it May Be Changed");
-}
-OUT=fopen("14.out","w");
-if(OUT==NULL)
-{printf("Please Verify The Current Dir.. it May Be Changed");
-}
-for(k=0;k<10;k++)
-{  for(i=0;i<M;i++)
-    for(j=0;j<N;j++)
-        fscanf(IN,"%d",&iIN[i][j]);
+main()     
+{ 
+  int a,b; long c;     
+  printf("input a, b:");     
+  scanf("%d%d", &a, &b);     
+  fun(a, b, &c);     
+  printf("The result is: %ld\n", c);
+  wwjt();     
+}  
 
-iOUT=fun(iIN);
-fprintf(OUT,"%d\n",iOUT);
-}
-fclose(IN);
-fclose(OUT);
+void wwjt( )     
+{  
+  FILE *rf, *wf ;     
+  int i, a,b ; long c ;     
+  rf = fopen("in.dat", "r") ;     
+  wf = fopen("out.dat","w") ;     
+  for(i = 0 ; i < 10 ; i++) 
+  {     
+    fscanf(rf, "%d,%d", &a, &b) ;     
+    fun(a, b, &c) ;     
+    fprintf(wf, "a=%d,b=%d,c=%ld\n", a, b, c) ;     
+  }     
+  fclose(rf) ;     
+  fclose(wf) ;     
 }

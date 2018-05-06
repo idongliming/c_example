@@ -2,64 +2,63 @@
 【程序设计】
 --------------------------------------------------
 
-功能：从字符串s中删除指定的字符c。
+功能：编写一个函数，该函数可以统计一个长度为2的字符
+      串在另一个字符串中出现的次数。
+例如：假定输入的字符串为：asdasasdfgasdaszx67asdmklo，
+      字符串为：as,则应输出6。
 
--------------------------------------------------*/
+------------------------------------------------*/
 
-#include <stdio.h>
-void wwjt();
-
-fun(char s[],char c)
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void  wwjt(); 
+  
+int fun(char *str,char *substr)
 {
-  
   /**********Program**********/
-  int i,j;
-  for(i=0;s[i]!='\0';i++)
-  {
-	  if(s[i]==c)
-	  {
-		  for(j=i;s[j+1]!='\0';j++)
-		  {
-			s[j]=s[j+1];
-		  }
-		  s[j]='\0';
-	  }
-  }
-  /**********  End  **********/
   
+  
+  
+  
+  
+  
+  /**********  End  **********/
 }
 
 main()
 {
-  static char str[]="turbo c and borland c++";
-  char c='a';
-  fun(str,c);
-  printf("str=%s\n",str);
+  char str[81],substr[3];
+  int n;
+  printf("输入主字符串： ");
+  gets(str);
+  printf("输入子字符串： ");
+  gets(substr);
+  puts(str);
+  puts(substr);
+  n=fun(str,substr);
+  printf("n=%d\n",n);
   wwjt();
 }
 
 void wwjt()
 {
   FILE *IN,*OUT;
-  char sin[80],cIN;
-  int i;
-  IN=fopen("13.IN","r");
+  int n;
+  char i[200];
+  IN=fopen("in.dat","r");
   if(IN==NULL)
   {
-    printf("Please Verify The Currernt Dir..it May Be Changed");
+    printf("Read FILE Error");
   }
-  OUT=fopen("13.out","w");
+  OUT=fopen("out.dat","w");
   if(OUT==NULL)
   {
-    printf("Please Verify The Current Dir.. it May Be Changed");
+    printf("Write FILE Error");
   }
-  for(i=0;i<10;i++)
-  {
-    fscanf(IN,"%s",sin);
-    cIN=getc(IN);cIN=getc(IN);
-    fun(sin,cIN);
-    fprintf(OUT,"%s\n",sin);
-  }
+  fscanf(IN,"%s",i);
+  n=fun(i,"as");
+  fprintf(OUT,"%d",n);
   fclose(IN);
   fclose(OUT);
 }

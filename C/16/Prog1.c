@@ -1,62 +1,22 @@
 /*------------------------------------------------
 【程序设计】
 --------------------------------------------------
-
-功能：编写函数fun求1!+2!+3!+ …… +n!的和,在main函
-      数中由键盘输入n值，并输出运算结果。请编写fun
-      函数。
-例如：若n值为5，则结果为153。
-
+利用公式计算π的值：
+π/4=1-1/3+1/5-1/7+....
+编程计算π的近似值，直到最后一项的绝对值小于10-6为止，
+输出π的值并统计累加的项数。
+要求：用do...while循环
 ------------------------------------------------*/
-    
-#include<stdio.h>
-void wwjt();
- 
-long int  fun(int n)
-{
-  
-  /**********Program**********/
 
-  
-  
-  
-  
-  /**********  End  **********/
-  
-}
-
-main()
+#include <stdio.h>
+#include <math.h>
+void main()
 {
-  int n;
-  long int result;
-  scanf("%d",&n);
-  result=fun(n);
-  printf("%ld\n",result);
-  wwjt();
-}
+        int fm=1,fz=1,n=0; /*fm:分母，fz：分子，n:项数*/
+        float term,pi=0;   /*term：第i项的值 */
+        /**********Program**********/
+        
+         /**********  End  **********/
+        printf("pi=%f\ncount=%d\n",pi,n);
 
-void wwjt()
-{
-FILE *IN,*OUT;
-  int i;
-  int iIN;
-  long int iOUT;
-  IN=fopen("in.dat","r");
-  if(IN==NULL)
-  {
-    printf("Please Verify The Currernt Dir..It May Be Changed");
-  }
-  OUT=fopen("out.dat","w");
-  if(OUT==NULL)
-  {
-    printf("Please Verify The Current Dir.. It May Be Changed");
-  }
-  for(i=0;i<10;i++)
-  {        
-    fscanf(IN,"%d",&iIN);
-    iOUT=fun(iIN);
-    fprintf(OUT,"%ld\n",iOUT);
-  }
-  fclose(IN);
-  fclose(OUT);
 }

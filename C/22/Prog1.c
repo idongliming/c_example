@@ -1,69 +1,35 @@
 /*------------------------------------------------
 【程序设计】
 --------------------------------------------------
+/* 两个正整数的最大公约数（GCD）是能够整除这两个整数的最大整数*/
+/* 请采用欧几里得方法编写计算最大公约数的函数Gcd()*/
+/* 在主函数中调用该函数计算并输出从键盘任意输入的两个整数的最大公约数*/
 
-功能：从键盘为一维整型数组输入10个整数，调用fun
-      函数找出其中最小的数，并在main函数中输出。
-      请编写fun函数。
-
--------------------------------------------------*/
-
-#include "stdio.h"
-void wwjt();
-
-int fun(int x[],int n)
+/*------------------------------------------------*/
+#include <stdio.h>
+void main()
 {
-  
-  /**********Program**********/
-  int i,min=x[0];
-  for(i=1;i<n;i++)
-  {
-	if(x[i]<min)
-	{
-		min=x[i];
-	}
-  }
-  return min;
-  /**********  End  **********/
-  
-  
+        int m,n;
+        int Gcd(int m,int n);
+        do
+        {
+                printf("输入m,n:");
+                scanf("%d%*c%d",&m,&n);
+        }while(m<=0||n<=0);
+        printf("%d和%d的最大公约数为:%d\n",m,n,Gcd(m,n));
+}
+int Gcd(int m,int n)
+{
+        int r,t;
+        /**********Program**********/
+        
+
+
+
+
+
+
+
+        /********** End **********/
 }
 
-main()
-{
-  int a[10],i,min;
-  for(i=0;i<10;i++)
-    scanf("%d",&a[i]);
-  for(i=0;i<10;i++)
-    printf("%3d",a[i]);
-  printf("\n");
-  min=fun(a,10);
-  printf("%d\n",min);
-  wwjt();
-}
-
-void wwjt()
-{
-  FILE *IN,*OUT;
-  int iIN[10],i;
-  int iOUT,iCOUNT;
-  IN=fopen("4.IN","r");
-  if(IN==NULL)
-  {
-    printf("Please Verify The Currernt Dir..it May Be Changed");
-  }
-  OUT=fopen("4.out","w");
-  if(OUT==NULL)
-  {
-    printf("Please Verify The Current Dir.. it May Be Changed");
-  }
-  for(i=0;i<10;i++)
-  {   
-    for(iCOUNT=0;iCOUNT<10;iCOUNT++)
-      fscanf(IN,"%d",&iIN[iCOUNT]);
-    iOUT=fun(iIN,10);
-    fprintf(OUT,"%d\n",iOUT);
-  }
-  fclose(IN);
-  fclose(OUT);
-}

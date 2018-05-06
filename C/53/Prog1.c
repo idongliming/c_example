@@ -1,57 +1,35 @@
-/*------------------------------------------------
-【程序设计】
---------------------------------------------------
-
-功能：求一个四位数的各位数字的立方和
-
-------------------------------------------------*/
+/*程序设计*/
+/*-----------------------------------*/
+/* 输入某年某月某日，计算并输出它是这一年的第几天
+-------------------------------*/
 
 #include <stdio.h>
-void wwjt();
-     
-int fun(int n)
+#include <stdlib.h>
+int DayofYear(int year,int month,int day);
+void main()
 {
-  
-  /**********Program**********/
-  int sum=0;
-  while(n)
-  {
-	sum+=(n%10)*(n%10)*(n%10);
-	n/=10;
-  }
-  return sum;
-  /**********  End  **********/
-  
+        int choice;
+        int year,month,day,yearday;
+        printf("输入年、月、日\n");
+        scanf("%d%d%d",&year,&month,&day);
+        yearday=DayofYear(year,month,day);
+        printf("%d年%d月%d日是这一年的第%d天\n",year,month,day,yearday);
+}
+int DayofYear(int year,int month,int day)  /* 计算第几天 */
+{
+        int k,i,yearday=0;
+        int m[2][12]={{31,28,31,30,31,30,31,31,30,31,30,31},
+        {31,29,31,30,31,30,31,31,30,31,30,31}};
+        /**************Program**************/
+        
+
+
+
+
+
+
+
+
+        /***************End****************/
 }
 
-main()
-{
-  int k;
-  k=fun(1234);
-  printf("k=%d\n",k);
-  wwjt();
-}
-
-void wwjt()
-{
-  FILE *IN,*OUT;
-  int iIN,iOUT,i;
-  IN=fopen("22.IN","r");
-  if(IN==NULL)
-  {
-    printf("Please Verify The Currernt Dir..it May Be Changed");
-  }
-  OUT=fopen("22.out","w");
-  if(OUT==NULL)
-  {
-    printf("Please Verify The Current Dir.. it May Be Changed");
-  }
-  for(i=0;i<10;i++)
-  {
-    fscanf(IN,"%d",&iIN);
-    iOUT=fun(iIN);
-    fprintf(OUT,"%d\n",iOUT);
-  }
-  fclose(IN);
-  fclose(OUT);
-}
