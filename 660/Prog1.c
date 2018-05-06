@@ -32,12 +32,12 @@ int countfail(float score[],int n) /*统计不及格人数*/
         int count=0; /*计数 */
         int i;
         /***************Program*************/
-        
-
-
-
-
-
+        for(i=0;i<n;i++)
+		{
+			if(score[i]<60);
+			count++;
+		}
+		return count;
         /**************End******************/
 }
 

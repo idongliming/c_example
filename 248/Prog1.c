@@ -41,11 +41,13 @@ float maxscore(float score[],int n)
         int i;
         int k=0;  /*存放最高成绩的下标*/
         /*************Program*************/
-        
-
-
-
-
-
+        for(i=0;i<n;i++)
+		{
+			if(score[i]>score[k])
+			{
+				k=i;
+			}
+		}
+		return score[k];
         /*************End*************/
 }

@@ -11,16 +11,11 @@ void main()
 {
         int n,sum=0;
          /**********Program**********/
-        
-
-
-
-
-
-
-
-
-
+        do{
+			scanf("%d",&n);
+			if(n>0)
+			sum+=n;
+		}while(n);
          /********** End **********/
         printf("sum=%d\n",sum);
 }

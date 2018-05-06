@@ -29,11 +29,12 @@ void main()
 unsigned long jiech(unsigned int n)
 {
          /**********Program**********/
-        
-
-
-
-
-
+        int j;
+		unsigned long jie=1;
+		for(j=n;j>=1;j--)
+		{
+			jie*=j;
+		}
+		return jie;
          /********** End **********/
 }

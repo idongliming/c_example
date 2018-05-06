@@ -41,14 +41,11 @@ float averscore(float score[],int n)
         float aver=0.0;
         int i;
         /***************Program*************/
-        
-
-
-
-
-
-
-
+        for(i=0;i<n;i++)
+		{
+			aver+=score[i]/n;
+		}
+		return aver;
         /***************End******************/
 }
 

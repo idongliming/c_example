@@ -12,12 +12,19 @@ int lcm(int m,int n)
         
         int k;
         /**********Program**********/
-        
-
-
-
-
-
+        int a=m,b=n,t;
+		if(m<n)
+		{
+			t=m;
+			m=n;
+			n=t;
+		}
+		while((k=m%n)!=0)
+		{
+			m=n;
+			n=k;
+		}
+		return a*b/n;
         /********** End **********/
 }
 int max(int m,int n)

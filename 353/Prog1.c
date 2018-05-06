@@ -16,12 +16,16 @@ void  wwjt();
 void fun(char *s,int num)
 {
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  int i,temp;
+  for(i=1;i<num-2;i++)
+  {
+	if(s[i]<s[i+1])
+	{
+		temp=s[i];
+		s[i]=s[i+1];
+		s[i+1]=temp;
+	}
+  }
   /**********  End  **********/
 }
 
