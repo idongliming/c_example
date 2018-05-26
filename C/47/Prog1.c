@@ -9,17 +9,19 @@
 ------------------------------------------------*/
 
 #include <stdio.h>
+#include <math.h>
 void  wwjt(); 
 
 long fun (long s,long t)
 {  
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+	int i=1;
+  while(s!=0)
+  {
+		t=t+((s%100)%10)*pow(10,i);
+		s=s/100;
+		i++;
+	}
   /**********  End  **********/
   return t;
 }  
