@@ -13,12 +13,19 @@ void  wwjt();
 long fun(int n)
 {
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  int i,j,flag=1;
+  long sum=1;
+  for(i=2;i<n;i++)
+  {
+    for(j=2;j<=i/2;j++)
+    {
+      if(i%j==0)
+      flag=0;
+    }
+    if(flag)
+    sum*=i;
+  }
+  return sum;
   /**********  End  **********/
   
 }
