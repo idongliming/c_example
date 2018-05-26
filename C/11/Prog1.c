@@ -25,23 +25,6 @@ void main()
         char diet;//是否有良好的饮食习惯
         float faHeight,maHeight,Height;
         /**********Program**********/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+        //这题没法写，要求不明确
          /**********  End  **********/
 }

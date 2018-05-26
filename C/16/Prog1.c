@@ -15,7 +15,16 @@ void main()
         int fm=1,fz=1,n=0; /*fm:分母，fz：分子，n:项数*/
         float term,pi=0;   /*term：第i项的值 */
         /**********Program**********/
-        
+        do{
+			n++;
+            fm=2*n-1;
+            term=1.0*fz/fm;
+			if(n%2==0)
+			pi-=term;
+			else
+				pi+=term;
+        }while(fabs(term)>1e-6);
+        pi*=4;
          /**********  End  **********/
         printf("pi=%f\ncount=%d\n",pi,n);
 

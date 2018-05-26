@@ -19,18 +19,28 @@ void main()
         int magic,guess,n,k=0,right=0,error=0; /* magic:计算机产生的数，guess：用户猜的数*/
         char cont; /* 表示是否继续猜下一个数 */
          /**********Program**********/
+        srand(time(NULL));//用时间初始化随机数种子
+        magic=rand()%10;
+        printf("猜猜我心里想的什么数（0-9）:");
+        do{
+                scanf("%d",&guess);
+                if(guess>magic)
+                {
+                        printf("大了\n");
+                        error++;
+                }
+                
+                else if(guess<magic)
+                {
+                        printf("小了\n");
+                        error++;
+                }
+                else
+                right++;
+                
+        }while(guess==magic||error==5);
         
-
-
-
-
-
-
-
-
-
-
-
+        
          /**********  End  **********/
         printf("你一共猜了%d个数，正确的%d个，错误的%d个\n",k,right,error);
         printf("游戏结束，再见！\n");
