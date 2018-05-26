@@ -18,12 +18,18 @@ void  wwjt();
 void fun(int tt[M][N],int pp[N])
 {
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  int i,j,max=0;
+  for(i=0;i<M;i++)
+  {
+    for(j=0;j<N;j++)
+    {
+      if(max<tt[i][j])
+      {
+        max=tt[i][j];
+      }
+    }
+    pp[i]=max;
+  }
   /**********  End  **********/
 }
 
