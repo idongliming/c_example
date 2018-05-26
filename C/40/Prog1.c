@@ -16,12 +16,7 @@ void  wwjt();
 void fun(int a, int b, long *c)     
 {
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  //÷ÿ∏¥¡À
   /**********  End  **********/
 }
 
