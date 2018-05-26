@@ -16,12 +16,7 @@ void  wwjt();
 void fun(int a, int b, long *c)     
 {
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+  //同下一题
   /**********  End  **********/
 }
 
