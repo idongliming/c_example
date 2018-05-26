@@ -16,11 +16,16 @@ long int  fun(int n)
 {
   
   /**********Program**********/
-
-  
-  
-  
-  
+  int i,jie,j,sum=0;
+  for(i=1;i<=n;i++)
+  {
+    for(j=1,jie=1;j<=i;j++)
+    {
+      jie*=j;
+    }
+    sum+=jie;
+  }
+  return sum;
   /**********  End  **********/
   
 }
