@@ -11,15 +11,15 @@
 #include <stdio.h>
 void  wwjt(); 
 
-void fun(int a[3][3])
+int fun(int a[3][3])
 {
-  /**********Program**********/
-  
-  
-  
-  
-  
-  
+  /**********Program**********/    
+   //问题了返回值应该是int 考试的时候题应该没问题
+	int i,sum=0;
+	for(i=0;i<3;i++)
+	{
+    sum+=a[0][i]+a[2][i];
+  }
   /**********  End  **********/
   
 }
@@ -67,3 +67,8 @@ void wwjt()
   fclose(IN);
   fclose(OUT);
 }
+
+
+
+
+
