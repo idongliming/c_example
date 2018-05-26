@@ -14,7 +14,7 @@ void  wwjt();
 long fun (long s,long t)
 {
   /**********Program**********/
-  
+  //同下一题
   /**********  End  **********/
   return t;
 }  
