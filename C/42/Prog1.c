@@ -17,12 +17,14 @@ void  wwjt();
 int fun(char *str,char *substr)
 {
   /**********Program**********/
-  
-  
-  
-  
-  
-  
+	int i=0;
+  while(*str!='\0')
+  {
+	if(*str==substr[0]&&*(str+1)==substr[1])
+		i++;
+	  str++;
+  }
+  return i;
   /**********  End  **********/
 }
 
