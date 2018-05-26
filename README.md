@@ -8,3 +8,4 @@ git remote add origin http:\\github.com/dlmgis/项目.git //仓库关联
 git push -u origin master //提交
 git pull origin master //拉取
 ```
+ 出现密码解决方法：git remote set-url origin git+ssh://git@github.com/dlmgis/C_example.git
